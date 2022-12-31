@@ -21,6 +21,10 @@ class PromptType extends AbstractType
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer',
+                'attr' => [
+                    'hx-post' => '/',
+                    'hx-target' => '#response',
+                ],
             ])
         ;
     }

@@ -5,7 +5,10 @@
 
     {{ form_start(form) }}
     {{ form_row(form.prompt) }}
-    {{ form_row(form.submit) }}
+    {{ form_row(form.submit, {
+        label_html: true,
+        label: '🦫 Réponds à cette question <img class="htmx-indicator" src="/wait.svg" />'
+    }) }}
     {{ form_end(form) }}
 
     <div id="response"></div>
